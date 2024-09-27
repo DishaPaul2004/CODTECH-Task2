@@ -1,0 +1,66 @@
+let register_btn = document.getElementById("register_btn");
+let login_btn = document.getElementById("login_btn");
+const name_field = document.getElementById("name_field");
+let form_title = document.getElementById("form_title");
+
+login_btn.onclick = function(){
+    name_field.style.maxHeight = "0";
+    form_title.innerHTML="Log in";
+    register_btn.classList.add("inactive");
+    register_btn.classList.remove("active");
+    login_btn.classList.remove("inactive");
+    login_btn.classList.add("active");
+}
+
+register_btn.onclick = function(){
+    name_field.style.maxHeight = "50px";
+    form_title.innerHTML="Register";
+    register_btn.classList.remove("inactive");
+    register_btn.classList.add("active");
+    login_btn.classList.add("inactive");
+    login_btn.classList.remove("active");
+}
+
+function move_to_login(){
+    name_field.style.maxHeight = "0";
+    form_title.innerHTML="Log in";
+    register_btn.classList.add("inactive");
+    register_btn.classList.remove("active");
+    login_btn.classList.remove("inactive");
+    login_btn.classList.add("active");
+}
+
+const form=document.getElementById("form");
+const submit_button=document.getElementById("submit_btn");
+
+submit_button.addEventListener("click", (e) => {
+    if (register_btn.classList.contains("active")){
+        e.preventDefault();
+        const name=form.name.value;
+        const email=form.email.value;
+        const password=form.password.value;
+        if (name === "Admin" && email === "admin@gmail.com"){
+            form.name.value="";
+            form.email.value="";
+            form.password.value="";
+            move_to_login();
+        }
+        else{
+            alert("Please enter the details correctly");
+        }
+    }
+    else{
+        e.preventDefault();
+        const email=form.email.value;
+        if (email === "admin@gmail.com"){
+            alert("Login successful");
+            form.name.value="";
+            form.email.value="";
+            form.password.value="";
+            window.location.href="blog.html";
+        }
+        else{
+            alert("Please enter the required details correctly");
+        }
+    }
+})
