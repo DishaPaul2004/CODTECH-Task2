@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blogging platform</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <link href="blog_site.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Blogs from around the world!</h1>
+            <div class="topnav">
+                <a href="blog_login.html">LOGIN</a>
+            </div>
+        </header>
+        <div class="info">
+            <p>
+                Welcome to <strong>Blogs from around the world!</strong>
+            </p>
+            <p>
+                A blogging platform where you can create, edit and delete your posts
+            </p>
+            <p>
+                In addition to, of course, sharing your creativity with the world...such is the power of words
+            </p>
+        </div>
+        <div class="photos">
+            <img src="quote2.png" alt="Quote on writing">
+            <img src="quote1.png" alt="Quote on writing">
+            <img src="quote3.png" alt="Quote on writing">
+        </div>
+    </body>
+</html>
