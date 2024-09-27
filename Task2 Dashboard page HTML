@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin's dashboard</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="blog.css">
+    </head>
+    <body>
+        <header>
+            <h1>My Dashboard</h1>
+        </header>
+        <div class="container">
+            <div class="vertical-menu">
+                <p>My blogs</p>
+                <ul id="list-of-blogs">
+                    <!--<li><a id="post" href="my_first_blog.txt" target="_self">My first blog</a>
+                    <button id="delete_btn">X</button>
+                    <button id="edit_btn">Edit</button></li>-->
+                </ul>
+                <button id="create_btn">Write a blog</button>
+            </div>
+            <div class="comments">
+                <h2>Comments on your dashboard</h2>
+                <div id="comment-section">
+                    <ul id="list-of-comments">
+                    <li><div class="comment">
+                        <h3>User 1</h3>
+                        <p>Great work</p>
+                    </div></li>
+                    <li><div class="comment">
+                        <h3>User 2</h3>
+                        <p>I love reading these blogs</p>
+                    </div></li>
+                    </ul>
+                </div>
+                <input type="text" id="user_name" placeholder="Username">
+                <input type="text" id="user_comment" placeholder="Write a comment...">
+                <button id="comment_btn">Send</button>
+            </div>
+        </div>
+        <div class="create">
+            <div class="blog-title"><input type="text" placeholder="Title" id="blog_title"></div>
+            <div class="blog-area"><textarea id="new_blog" rows="5" columns="40" placeholder="Start writing..."></textarea></div>
+            <div class="save"><button id="save_btn">Save</button></div>
+        </div>
+        <script src="blog.js"></script>
+    </body>
+</html>
